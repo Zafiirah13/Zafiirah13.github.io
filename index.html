@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zafiirah Hosenie · Senior Research Scientist · VLM Evaluation, Gaussian Splats & Quant</title>
+  <meta name="description" content="Zafiirah Hosenie, Senior Research Scientist at Microsoft (Teams AI Lab). Vision-language model evaluation, 3D Gaussian splats, machine learning for astronomy, and a blog on agentic evaluation and quantitative trading." />
+  <meta name="author" content="Zafiirah Hosenie" />
+  <meta property="og:title" content="Zafiirah Hosenie: from the stars to how AI sees" />
+  <meta property="og:description" content="Senior Research Scientist at Microsoft. VLM evaluation · Gaussian splats · Astro-ML · Quant learning · Mentorship." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/portrait.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#f7f4ee" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("zh-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.9L19 9.7l-5.2 1.8L12 16.4l-1.8-4.9L5 9.7l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14a6.5 6.5 0 013.5 6"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+      <symbol id="i-telescope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l14-7 2 4-14 7z"/><path d="M8 15l-3 6M11 14l3 7M17 6l1.5-.8 2 4-1.5.8"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 00-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0C17 4.9 18 5.2 18 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0012 .5z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2.3h3.4l-7.4 8.4L23 21.7h-6.8l-5.3-6.9-6.1 6.9H1.4l7.9-9L.9 2.3h7l4.8 6.3zm-1.2 17.4h1.9L7.1 4.2H5.1z"/></symbol>
+      <symbol id="i-scholar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9.2-9.4C1.6 7 4 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4 20 4 22.4 7 21.2 10.6 19.5 15.4 12 20 12 20z"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></symbol>
+      <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 006.2 21.5h11.6a2 2 0 001.7-3L14 9V3"/><path d="M7 15h10"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="i-shuffle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 015.5 3H20v16H5.5A1.5 1.5 0 004 20.5z"/><path d="M4 20.5A1.5 1.5 0 005.5 22H20v-3"/></symbol>
+          <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="ambient" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <button class="brand" data-goto="home" aria-label="Zafiirah Hosenie, home">
+      <span class="brand-mark">ZH</span>
+      <span class="brand-name">Zafiirah Hosenie</span>
+    </button>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" data-tab="home" aria-selected="true">Home</button>
+      <button class="tab" role="tab" data-tab="journey" aria-selected="false">Journey</button>
+      <button class="tab" role="tab" data-tab="research" aria-selected="false">Research</button>
+      <button class="tab" role="tab" data-tab="evals" aria-selected="false">Evals</button>
+      <button class="tab" role="tab" data-tab="quant" aria-selected="false">Quant Lab</button>
+      <button class="tab" role="tab" data-tab="blog" aria-selected="false">Blog</button>
+      <button class="tab" role="tab" data-tab="impact" aria-selected="false">Impact</button>
+      <button class="tab" role="tab" data-tab="contact" aria-selected="false">Contact</button>
+    </nav>
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light / night-sky mode">
+      <svg class="moon"><use href="#i-moon"/></svg><svg class="sun"><use href="#i-sun"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- ===================== HOME ===================== -->
+    <section class="panel active" id="home" role="tabpanel" aria-label="Home">
+      <div class="hero">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Senior Research Scientist · Microsoft Teams AI Lab</span>
+          <h1>Dr <span class="grad-text">Zafiirah Hosenie</span>
+            <span class="sub">From reading the stars to measuring how AI sees.</span>
+          </h1>
+          <p class="lead">I evaluate <b>vision-language models (VLMs)</b> that understand meetings and the people in them: what they see, what they miss, and why. Before that I built 3D Gaussian splats and avatar technology at Microsoft, and machine-learning pipelines that still run on the MeerKAT and MeerLICHT telescopes. Outside work, I'm learning <b>quantitative trading</b> and exploring <b>agentic evaluation</b>.</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-goto="journey">Explore my journey <svg><use href="#i-arrow"/></svg></button>
+            <button class="btn ghost" data-goto="blog">Read my blog</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>1st</b><span>IoP Computational Physics Thesis Prize 2022</span></div>
+            <div class="stat"><b>🏆</b><span>Grand Prize · Microsoft Global Hackathon 2021</span></div>
+            <div class="stat"><b>11</b><span>peer-reviewed &amp; arXiv publications</span></div>
+            <div class="stat"><b>2</b><span>telescopes running my ML pipelines</span></div>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <div class="portrait"><img src="assets/img/portrait.webp" alt="Portrait of Zafiirah Hosenie" width="800" height="800" /></div>
+          <div class="float-chip c1"><span class="em">🤖</span>Artificial Intelligence</div>
+          <div class="float-chip c2"><span class="em">📈</span>Quantitative finance</div>
+          <div class="float-chip c3"><span class="em">🌴</span>Mauritius → London</div>
+        </div>
+      </div>
+
+      <figure class="quote">
+        <blockquote>"It's not important what people think when you come in, it's much more important what people think when you leave."</blockquote>
+        <figcaption><b>Jürgen Klopp</b> · A line I live by: in every team, project and mentorship, I aim to leave things better than I found them.</figcaption>
+      </figure>
+
+      <div class="feature-grid">
+        <button class="card hover feature" data-goto="evals/vlm">
+          <div class="ico sky"><svg><use href="#i-eye"/></svg></div>
+          <h3>VLM evaluation</h3>
+          <p>How vision-language models perform on real meeting video.</p>
+        </button>
+        <button class="card hover feature" data-goto="research/splats">
+          <div class="ico sage"><svg><use href="#i-cube"/></svg></div>
+          <h3>Gaussian splats</h3>
+          <p>Real-time 3D, made about 12x smaller with quantisation.</p>
+        </button>
+        <button class="card hover feature" data-goto="quant/log">
+          <div class="ico autumn"><svg><use href="#i-chart"/></svg></div>
+          <h3>Quant learning</h3>
+          <p>A chapter-by-chapter journal: objectives and results.</p>
+        </button>
+        <button class="card hover feature" data-goto="evals/agentic">
+          <div class="ico mustard"><svg><use href="#i-check"/></svg></div>
+          <h3>Agentic evals</h3>
+          <p>My notes and framework, from Hugging Face and LangChain.</p>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== JOURNEY ===================== -->
+    <section class="panel" id="journey" role="tabpanel" aria-label="Journey">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">🌍 Mauritius → South Africa → United Kingdom</span>
+          <h2 class="title">My <span class="grad-text">journey</span></h2>
+        </div>
+        <div class="subtabs" role="tablist" data-group="journey">
+          <button class="subtab" role="tab" data-sub="story" aria-selected="true">Story &amp; experience</button>
+          <button class="subtab" role="tab" data-sub="skills" aria-selected="false">Skills</button>
+        </div>
+      </div>
+
+      <div class="subpanel active" data-group="journey" data-sub="story">
+        <div class="two-col">
+          <div class="card story">
+            <p>I grew up in Mauritius, a small island in the Indian Ocean, where I fell for physics long before I knew what machine learning was. After a BSc in Physics at the University of Mauritius, I won SKA and North-West University bursaries for an MSc in Astrophysics &amp; Space Science in South Africa, where I was the first to use a <b>GAN to augment radio-astronomy images</b>.</p>
+            <p>A Newton Fund <b>DARA Big Data</b> scholarship (one of only three) took me to Jodrell Bank, University of Manchester, for my PhD. The pipelines I built there run on the <b>MeerKAT</b> and <b>MeerLICHT</b> telescopes, and my thesis won the Institute of Physics Computational Physics Thesis Prize.</p>
+            <p>Then I moved from stars to people: climate risk at a FinTech, then Microsoft Research Cambridge (face tracking, synthetic data, <b>Gaussian splats</b> and avatars for Microsoft Mesh), and now <b>VLM evaluation</b> in the Teams AI Lab.</p>
+          </div>
+          <div class="traits">
+            <div class="card trait"><div class="ico sky"><svg><use href="#i-telescope"/></svg></div><div><h4>Curious by default</h4><p>Stars, faces, 3D, markets: I follow interesting data wherever it leads.</p></div></div>
+            <div class="card trait"><div class="ico sage"><svg><use href="#i-target"/></svg></div><div><h4>Evidence over vibes</h4><p>If it isn't measured, sliced and stress-tested, it isn't finished.</p></div></div>
+            <div class="card trait"><div class="ico autumn"><svg><use href="#i-heart"/></svg></div><div><h4>Lift as I climb</h4><p>Mentor to women in data science; WomenTech Network Global Ambassador.</p></div></div>
+            <div class="card trait"><div class="ico mustard"><svg><use href="#i-globe"/></svg></div><div><h4>Island roots</h4><p>Proudly Mauritian, shaped by three continents and many teams.</p></div></div>
+          </div>
+        </div>
+        <h3 class="section-title">Experience &amp; Education</h3>
+        <div class="timeline">
+          <div class="tl-list" role="tablist" id="tlList" aria-label="Experience and education timeline"></div>
+          <article class="card tl-detail" id="tlDetail" aria-live="polite"></article>
+        </div>
+      </div>
+
+      <div class="subpanel" data-group="journey" data-sub="skills">
+        <div class="skills-grid">
+          <div class="card"><h3><span class="ico sky"><svg><use href="#i-eye"/></svg></span>Vision &amp; multimodal</h3>
+            <div class="chips"><span class="chip sky">VLM evaluation</span><span class="chip sky">Multimodal LLMs</span><span class="chip">Face detection &amp; tracking</span><span class="chip">Identity metrics</span><span class="chip">CNNs &amp; ViTs</span><span class="chip">Mask R-CNN</span></div></div>
+          <div class="card"><h3><span class="ico sage"><svg><use href="#i-cube"/></svg></span>3D &amp; generative</h3>
+            <div class="chips"><span class="chip sage">3D Gaussian splatting</span><span class="chip sage">Vector quantisation</span><span class="chip">COLMAP · GLOMAP</span><span class="chip">Avatars</span><span class="chip">Synthetic data</span><span class="chip">GANs &amp; diffusion</span></div></div>
+          <div class="card"><h3><span class="ico autumn"><svg><use href="#i-check"/></svg></span>Evaluation &amp; metrics</h3>
+            <div class="chips"><span class="chip autumn">Failure slicing</span><span class="chip autumn">FP / FN analysis</span><span class="chip">LLM-as-a-judge</span><span class="chip">Quality scoring</span><span class="chip">Outlier detection</span><span class="chip">Eval dashboards</span></div></div>
+          <div class="card"><h3><span class="ico mustard"><svg><use href="#i-flask"/></svg></span>ML &amp; statistics</h3>
+            <div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow / Keras</span><span class="chip">scikit-learn</span><span class="chip">Gaussian processes</span><span class="chip">Bayesian evidence &amp; MCMC</span><span class="chip">Imbalanced learning</span></div></div>
+          <div class="card"><h3><span class="ico autumn"><svg><use href="#i-chart"/></svg></span>Quant (learning)</h3>
+            <div class="chips"><span class="chip">GARCH</span><span class="chip">TSMOM · MACD · SMA</span><span class="chip">Volatility targeting</span><span class="chip">Portfolio optimisation</span><span class="chip">Walk-forward CV · Optuna</span><span class="chip">ESG &amp; climate risk</span></div></div>
+          <div class="card"><h3><span class="ico sky"><svg><use href="#i-code"/></svg></span>Data &amp; tools</h3>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Azure ML</span><span class="chip">Pandas · NumPy</span><span class="chip">Google Earth Engine</span><span class="chip">Prompt engineering</span><span class="chip">Git</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section class="panel" id="research" role="tabpanel" aria-label="Research">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">🔭 Astronomy · Vision · 3D</span>
+          <h2 class="title">Research &amp; <span class="grad-text">publications</span></h2>
+        </div>
+        <div class="subtabs" role="tablist" data-group="research">
+          <button class="subtab" role="tab" data-sub="now" aria-selected="true">Now</button>
+          <button class="subtab" role="tab" data-sub="splats" aria-selected="false">Gaussian splats</button>
+          <button class="subtab" role="tab" data-sub="earlier" aria-selected="false">Earlier work</button>
+          <button class="subtab" role="tab" data-sub="pubs" aria-selected="false">Publications</button>
+          <button class="subtab" role="tab" data-sub="code" aria-selected="false">Open source</button>
+        </div>
+      </div>
+
+      <div class="subpanel active" data-group="research" data-sub="now">
+        <div class="grid-3">
+          <button class="card hover now-card" data-goto="evals/vlm"><div class="ico sky"><svg><use href="#i-eye"/></svg></div><span class="chip sky">Now · Teams AI Lab</span><h3>VLM evaluation for meetings</h3><p>Measuring how vision-language models understand real meeting video, and where they fail.</p></button>
+          <div class="card hover"><div class="ico sage"><svg><use href="#i-check"/></svg></div><span class="chip sage">Now · Teams AI Lab</span><h3>Enrollment quality</h3><p>Quality scores, outlier metrics and dashboards for meeting-room devices, replacing manual enrollment.</p></div>
+          <div class="card hover"><div class="ico autumn"><svg><use href="#i-target"/></svg></div><span class="chip autumn">Now · Teams AI Lab</span><h3>Identity &amp; tracking metrics</h3><p>False positives and negatives under occlusion, head pose, resolution and frame rate.</p></div>
+          <button class="card hover now-card" data-goto="research/splats"><div class="ico mustard"><svg><use href="#i-cube"/></svg></div><span class="chip">Mixed Reality &amp; AI Lab</span><h3>Gaussian splat compression</h3><p>Vector quantisation and opacity pruning: about 12x smaller, same quality.</p></button>
+          <div class="card hover"><div class="ico sky"><svg><use href="#i-users"/></svg></div><span class="chip">ICCV 2025</span><h3>VoluMe: live 3D video calls</h3><p>Real-time Gaussian splats of people from a single webcam.</p></div>
+          <div class="card hover"><div class="ico sage"><svg><use href="#i-sparkle"/></svg></div><span class="chip">SIGGRAPH Asia 2024</span><h3>Avatars from synthetic data</h3><p>Fairness-aware hairstyles and markerless capture, feeding auto-generated avatars.</p></div>
+        </div>
+      </div>
+
+      <div class="subpanel" data-group="research" data-sub="splats">
+        <p class="lead sub-lead">My work on 3D Gaussian Splatting at Microsoft: what splats are, how to compress them, and what I measured. Click a card to read.</p>
+        <div class="post-grid" data-series="splats"></div>
+      </div>
+
+      <div class="subpanel" data-group="research" data-sub="earlier">
+        <p class="lead sub-lead">MSc, PhD and FinTech work. Each card opens a short summary with the key results.</p>
+        <div class="post-grid" data-series="research"></div>
+      </div>
+
+      <div class="subpanel" data-group="research" data-sub="pubs">
+        <div class="filters" id="pubFilters">
+          <button class="filter" data-f="all" aria-pressed="true">All</button>
+          <button class="filter" data-f="ai" aria-pressed="false">AI &amp; Vision</button>
+          <button class="filter" data-f="astro" aria-pressed="false">Astro-ML</button>
+          <button class="filter" data-f="cosmo" aria-pressed="false">Cosmology &amp; Bayesian</button>
+        </div>
+        <div class="pub-grid" id="pubGrid"></div>
+        <div class="pager" id="pubPager"></div>
+      </div>
+
+      <div class="subpanel" data-group="research" data-sub="code">
+        <div class="grid-3" id="repoGrid"></div>
+        <p class="muted" style="margin-top:16px">Learning in public: <a href="https://github.com/Zafiirah13/Diffusion-Model-Learning" target="_blank" rel="noopener">Diffusion models</a> · <a href="https://github.com/Zafiirah13/Vision-Transformer-Learning" target="_blank" rel="noopener">Vision Transformers</a> · <a href="https://github.com/Zafiirah13/NLP-Learning" target="_blank" rel="noopener">NLP</a> · <a href="https://github.com/Zafiirah13/FRGAN" target="_blank" rel="noopener">FRGAN</a></p>
+      </div>
+    </section>
+
+    <!-- ===================== EVALS ===================== -->
+    <section class="panel" id="evals" role="tabpanel" aria-label="Evaluation">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">👁️ VLMs · Agents · Prompts</span>
+          <h2 class="title">AI that's <span class="grad-text">measured, not assumed</span></h2>
+        </div>
+        <div class="subtabs" role="tablist" data-group="evals">
+          <button class="subtab" role="tab" data-sub="vlm" aria-selected="true">VLM evaluation</button>
+          <button class="subtab" role="tab" data-sub="agentic" aria-selected="false">Agentic evals</button>
+          <button class="subtab" role="tab" data-sub="prompting" aria-selected="false">Prompt engineering</button>
+          <button class="subtab" role="tab" data-sub="evolution" aria-selected="false">From n-grams to VLMs</button>
+        </div>
+      </div>
+
+      <div class="subpanel active" data-group="evals" data-sub="vlm">
+        <div class="evals-layout">
+          <div>
+            <span class="chip sky">My day job</span>
+            <p class="lead" style="margin-top:10px">A vision-language model can describe a meeting fluently and still miss who is speaking, invent an object, or fall apart when the camera is far away. My job is to measure <b>what it gets right, where it fails, and why</b>.</p>
+            <div class="pipeline">
+              <div class="step"><span class="n">1</span><div><h4>Define "good"</h4><p>A clear task and rubric for each meeting scenario.</p></div></div>
+              <div class="step"><span class="n">2</span><div><h4>Test on real scenarios</h4><p>Representative video: rooms, lighting, camera distance, number of people.</p></div></div>
+              <div class="step"><span class="n">3</span><div><h4>Score what matters</h4><p>Perception, grounding, reasoning over time, and hallucinations.</p></div></div>
+              <div class="step"><span class="n">4</span><div><h4>Slice the results</h4><p>Break down by occlusion, head pose, resolution and frame rate to find real failure modes.</p></div></div>
+              <div class="step"><span class="n">5</span><div><h4>Calibrate and track</h4><p>Check automatic judges against people, then track everything on dashboards.</p></div></div>
+            </div>
+          </div>
+          <div class="card" id="sliceCard">
+            <div class="trace-head">
+              <h3><svg width="18" height="18"><use href="#i-target"/></svg>Sample slice report</h3>
+              <button class="btn ghost" id="replaySlices" style="padding:7px 12px;font-size:.82rem"><svg><use href="#i-play"/></svg>Replay</button>
+            </div>
+            <p class="muted" style="margin:0 0 10px">Same model, same questions, different conditions. An overall score of 0.82 hides a much weaker tail.</p>
+            <div id="sliceRows"></div>
+            <div class="verdict" id="sliceVerdict"><b>Finding:</b> heavy occlusion and low resolution drive most errors. Fix the data and capture conditions before changing the model.</div>
+            <p class="muted" style="margin:10px 0 0;font-size:.76rem">Illustrative example of how I present results, not real data.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subpanel" data-group="evals" data-sub="agentic">
+        <p class="lead sub-lead"><span class="chip sage">Interest</span>&nbsp; Agents plan, call tools and loop, so they need more than output grading. Here is the framework I use to think about it, built from public Hugging Face and LangChain material. Click a card to read.</p>
+        <div class="framework">
+          <div class="fw-step"><b>1 · Final answer</b><span>Is the result right?</span></div>
+          <div class="fw-step"><b>2 · Each step</b><span>Right tool, right arguments?</span></div>
+          <div class="fw-step"><b>3 · Trajectory</b><span>A sensible path?</span></div>
+          <div class="fw-step"><b>4 · Observe live</b><span>Traces &amp; online evals</span></div>
+          <div class="fw-step"><b>5 · Harness</b><span>Datasets, pass^k, gates</span></div>
+        </div>
+        <div class="post-grid" data-series="agentic"></div>
+      </div>
+
+      <div class="subpanel" data-group="evals" data-sub="prompting">
+        <div class="grid-3">
+          <div class="card hover"><div class="ico sky"><svg><use href="#i-users"/></svg></div><h3>Role &amp; context</h3><p>Give the model a clear persona, audience and constraints. Ambiguity in, ambiguity out.</p></div>
+          <div class="card hover"><div class="ico sage"><svg><use href="#i-layers"/></svg></div><h3>Few-shot examples</h3><p>Curated, diverse examples, including edge cases, that show the behaviour I want.</p></div>
+          <div class="card hover"><div class="ico autumn"><svg><use href="#i-sparkle"/></svg></div><h3>Decompose &amp; reason</h3><p>Break tasks into steps; ask for reasoning where it measurably helps, and verify it.</p></div>
+          <div class="card hover"><div class="ico mustard"><svg><use href="#i-code"/></svg></div><h3>Structured outputs</h3><p>JSON schemas and typed fields so outputs are parseable, testable and easy to compare.</p></div>
+          <div class="card hover"><div class="ico sky"><svg><use href="#i-eye"/></svg></div><h3>Visual prompts</h3><p>For VLMs: say which frames, regions or people matter, and ask for evidence from the image.</p></div>
+          <div class="card hover"><div class="ico sage"><svg><use href="#i-check"/></svg></div><h3>Rubrics &amp; judges</h3><p>Judge prompts with explicit rubrics, checked against people before they're trusted.</p></div>
+        </div>
+        <figure class="quote" style="margin-top:18px">
+          <blockquote style="font-size:1.15rem">Prompts are code: version them, test them, and never ship one without a regression suite.</blockquote>
+          <figcaption>My notes &amp; resources: <a href="https://github.com/Zafiirah13/Prompt-Engineering" target="_blank" rel="noopener">github.com/Zafiirah13/Prompt-Engineering</a></figcaption>
+        </figure>
+      </div>
+
+      <div class="subpanel" data-group="evals" data-sub="evolution">
+        <div class="evo">
+          <div class="evo-step old"><div class="badge">📊</div><span class="when">2019</span><h4>Classic NLP</h4><p>NLTK &amp; spaCy pipelines.</p><div class="then">word counts · n-grams · polarity</div></div>
+          <div class="evo-step"><div class="badge">🔗</div><span class="when">2020</span><h4>Applied NLP</h4><p>Matching power-plant names for climate risk.</p><div class="then">fuzzy matching · scoring</div></div>
+          <div class="evo-step"><div class="badge">🧠</div><span class="when">2022</span><h4>Transformers</h4><p>Mentoring NLP teams at Africa Women in Data Science.</p><div class="then">attention · ViTs · diffusion</div></div>
+          <div class="evo-step"><div class="badge">✍️</div><span class="when">2023</span><h4>LLMs &amp; prompting</h4><p>Building a prompt-engineering playbook.</p><div class="then">few-shot · reasoning · JSON</div></div>
+          <div class="evo-step now"><div class="badge">👁️</div><span class="when">Now</span><h4>VLMs &amp; agents</h4><p>VLM evaluation at work; agentic evals as an interest.</p><div class="then">grounding · judges · reliability</div></div>
+        </div>
+        <div class="card" style="margin-top:22px">
+          <h3 style="margin-bottom:12px">What I measure, then and now</h3>
+          <div class="grid-2" style="gap:10px">
+            <div class="step"><span class="n">↗</span><div><h4>Word frequency → Task success</h4><p>Did the model actually do what the user needed?</p></div></div>
+            <div class="step"><span class="n">↗</span><div><h4>Polarity score → Rubric-based judges</h4><p>Automatic judges, checked against human ratings.</p></div></div>
+            <div class="step"><span class="n">↗</span><div><h4>N-gram prediction → Visual grounding</h4><p>Does the answer match what is on screen?</p></div></div>
+            <div class="step"><span class="n">↗</span><div><h4>Subjectivity → Hallucination rate</h4><p>How often does it describe things that aren't there?</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUANT ===================== -->
+    <section class="panel" id="quant" role="tabpanel" aria-label="Quant Lab">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">📈 A passion I'm learning</span>
+          <h2 class="title">The <span class="grad-text">Quant Lab</span></h2>
+        </div>
+        <div class="subtabs" role="tablist" data-group="quant">
+          <button class="subtab" role="tab" data-sub="log" aria-selected="true">Learning log</button>
+          <button class="subtab" role="tab" data-sub="scoreboard" aria-selected="false">Scoreboard</button>
+          <button class="subtab" role="tab" data-sub="playground" aria-selected="false">Playground</button>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <svg><use href="#i-book"/></svg>
+        <span>This is my learning journal. I'm working through <a href="https://www.cambridge.org/core/books/deep-learning-in-quantitative-trading/C39DE06D255470F6232BC97E2E5474E7" target="_blank" rel="noopener"><i>Deep Learning in Quantitative Trading</i></a> by Zihao Zhang and Stefan Zohren (Cambridge University Press, 2025). Each card is one topic: my objective, what I ran, and my results, in my own words. The book's text and code are not reproduced. Not investment advice.</span>
+      </div>
+
+      <div class="subpanel active" data-group="quant" data-sub="log">
+        <div class="post-grid" data-series="quant"></div>
+      </div>
+
+      <div class="subpanel" data-group="quant" data-sub="scoreboard">
+        <div class="scoreboard">
+          <div class="card">
+            <h3>Annualised Sharpe ratio: my runs</h3>
+            <p class="muted" style="margin:4px 0 14px">Out of sample where applicable. Higher is better.</p>
+            <div id="sbRows"></div>
+          </div>
+          <div class="card">
+            <h3>What the numbers taught me</h3>
+            <div class="pipeline">
+              <div class="step"><span class="n">1</span><div><h4>Risk-adjusted beats raw</h4><p>Volatility targeting cut returns from 23% to 13% but lifted Sharpe from 0.58 to 0.85.</p></div></div>
+              <div class="step"><span class="n">2</span><div><h4>Baselines are brutal</h4><p>Equal-weight long-only (0.79) beat long-short momentum (0.07).</p></div></div>
+              <div class="step"><span class="n">3</span><div><h4>Check behaviour, not only PnL</h4><p>My deep momentum net learned a small, steady long bias: drift, not timing.</p></div></div>
+              <div class="step"><span class="n">4</span><div><h4>Respect time and regimes</h4><p>Walk-forward validation, lagged signals, and the COVID-19 crash exposed an overfit model.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subpanel" data-group="quant" data-sub="playground">
+        <div class="playground">
+          <div class="card">
+            <h3>Volatility-targeting simulator</h3>
+            <p class="muted" style="margin:4px 0 16px">Simulates a GARCH(1,1) market and compares buy and hold with a strategy that scales exposure to hit a target volatility, using only past data.</p>
+            <div class="control"><label for="alpha">α (shock reaction) <output id="alphaOut"></output></label><input type="range" id="alpha" min="0.02" max="0.25" step="0.01" value="0.10" /></div>
+            <div class="control"><label for="beta">β (volatility memory) <output id="betaOut"></output></label><input type="range" id="beta" min="0.50" max="0.97" step="0.01" value="0.86" /></div>
+            <div class="control"><label for="target">Target volatility <output id="targetOut"></output></label><input type="range" id="target" min="0.05" max="0.40" step="0.01" value="0.15" /></div>
+            <div class="control"><label for="drift">Annual drift μ <output id="driftOut"></output></label><input type="range" id="drift" min="0" max="0.20" step="0.01" value="0.08" /></div>
+            <button class="btn ghost" id="reroll" style="width:100%;justify-content:center"><svg><use href="#i-shuffle"/></svg>New market path</button>
+          </div>
+          <div class="card">
+            <div class="chart-wrap"><canvas id="simChart" aria-label="Simulated cumulative log returns"></canvas></div>
+            <div class="legend"><span><i style="background:#5f8fbd"></i>Buy &amp; hold</span><span><i style="background:#c8774b"></i>Vol-targeted</span><span><i style="background:#6f9c7c;opacity:.6"></i>GARCH σ (scaled)</span></div>
+            <div class="kpis" id="kpis"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BLOG ===================== -->
+    <section class="panel" id="blog" role="tabpanel" aria-label="Blog">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">✍️ Short, simple notes</span>
+          <h2 class="title">The <span class="grad-text">blog</span></h2>
+        </div>
+        <div class="filters" id="blogFilters" style="margin:0"></div>
+      </div>
+      <div class="post-grid" id="blogGrid"></div>
+    </section>
+
+    <!-- ===================== IMPACT ===================== -->
+    <section class="panel" id="impact" role="tabpanel" aria-label="Impact">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">🏆 Awards · Mentorship · Community</span>
+          <h2 class="title">Impact &amp; <span class="grad-text">community</span></h2>
+        </div>
+        <div class="subtabs" role="tablist" data-group="impact">
+          <button class="subtab" role="tab" data-sub="awards" aria-selected="true">Awards</button>
+          <button class="subtab" role="tab" data-sub="mentorship" aria-selected="false">Mentorship</button>
+          <button class="subtab" role="tab" data-sub="events" aria-selected="false">Talks &amp; events</button>
+        </div>
+      </div>
+      <div class="subpanel active" data-group="impact" data-sub="awards"><div class="grid-2" id="awardGrid"></div></div>
+      <div class="subpanel" data-group="impact" data-sub="mentorship"><div class="grid-3" id="mentorGrid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))"></div></div>
+      <div class="subpanel" data-group="impact" data-sub="events"><div class="grid-3" id="eventGrid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))"></div></div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="panel" id="contact" role="tabpanel" aria-label="Contact">
+      <div class="contact">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Open to conversations</span>
+          <h2 class="title" style="margin-top:16px">Let's make something people <span class="grad-text">remember after they leave.</span></h2>
+          <p class="lead" style="margin-top:14px">Happy to chat about VLM evaluation, Gaussian splats, quant, speaking, or mentoring, especially if you're early in your data-science journey.</p>
+          <p class="muted" style="margin-top:14px">📍 Based in the UK · originally from Mauritius 🌴</p>
+        </div>
+        <div class="links">
+          <a class="card hover link-card" href="mailto:zafiirah.hosenie@gmail.com"><span class="ico autumn"><svg><use href="#i-mail"/></svg></span><div><b>Email</b><span>zafiirah.hosenie@gmail.com</span></div></a>
+          <a class="card hover link-card" href="https://www.linkedin.com/in/zafiirah-hosenie" target="_blank" rel="noopener"><span class="ico sky"><svg><use href="#i-linkedin"/></svg></span><div><b>LinkedIn</b><span>in/zafiirah-hosenie</span></div></a>
+          <a class="card hover link-card" href="https://github.com/Zafiirah13" target="_blank" rel="noopener"><span class="ico sage"><svg><use href="#i-github"/></svg></span><div><b>GitHub</b><span>Zafiirah13</span></div></a>
+          <a class="card hover link-card" href="https://twitter.com/ZHosenie" target="_blank" rel="noopener"><span class="ico mustard"><svg><use href="#i-x"/></svg></span><div><b>X / Twitter</b><span>@ZHosenie</span></div></a>
+          <a class="card hover link-card" href="https://scholar.google.com/citations?user=o5YNQCsAAAAJ" target="_blank" rel="noopener"><span class="ico sky"><svg><use href="#i-scholar"/></svg></span><div><b>Google Scholar</b><span>Publications &amp; citations</span></div></a>
+          <a class="card hover link-card" href="https://arxiv.org/search/?query=Hosenie%2C+Zafiirah&amp;searchtype=author" target="_blank" rel="noopener"><span class="ico sage"><svg><use href="#i-book"/></svg></span><div><b>arXiv</b><span>Preprints</span></div></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Zafiirah Hosenie</footer>
+
+  <!-- Reader (blog posts) -->
+  <div class="modal reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+    <article class="reader-box">
+      <button class="icon-btn modal-close" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button>
+      <div id="readerBody"></div>
+    </article>
+  </div>
+  <!-- Modal (publications) -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="icon-btn modal-close" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <!-- Lightbox -->
+  <div class="modal lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <figure style="margin:0"><img id="lbImg" alt="" /><figcaption id="lbCap"></figcaption></figure>
+  </div>
+
+  <!-- Ask-my-agent -->
+  <button class="agent-fab" id="agentFab" aria-expanded="false" aria-controls="agent"><svg><use href="#i-chat"/></svg><span class="lbl">Ask my agent</span></button>
+  <section class="agent" id="agent" aria-label="Ask my agent">
+    <div class="agent-head">
+      <span class="brand-mark" style="width:34px;height:34px;font-size:.85rem">ZH</span>
+      <div><b>Zafiirah's agent</b><small>Searches this site, the blog and the web</small></div>
+      <button class="icon-btn" id="agentClose" aria-label="Close chat"><svg><use href="#i-close"/></svg></button>
+    </div>
+    <div class="agent-log" id="agentLog" aria-live="polite"></div>
+    <div class="suggest" id="agentSuggest"></div>
+    <form id="agentForm" autocomplete="off">
+      <input id="agentInput" placeholder="Ask about her work, the blog, or anything…" aria-label="Your question" />
+      <button type="submit">Send</button>
+    </form>
+    <p class="agent-note">Answers use site search, Wikipedia, DuckDuckGo and the free Pollinations.ai model. Please don't share personal information.</p>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
